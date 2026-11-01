@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Monthsary 💗</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #ffc1d6);
+    color: #a83265;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 25px 15px;
+}
+
+.card {
+    background: white;
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 30px 22px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px #b94b7730;
+}
+
+.heart {
+    font-size: 55px;
+    animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+    color: #e75480;
+    font-size: 30px;
+}
+
+h2 {
+    color: #e75480;
+}
+
+p {
+    line-height: 1.8;
+}
+
+button {
+    background: #e75480;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #d6336c;
+}
+
+#message {
+    display: none;
+    margin-top: 25px;
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+    animation: appear 1s ease;
+}
+
+.photo {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="heart">💗</div>
+
+        <h1>Happy Monthsary!</h1>
+
+        <h2>To My Lovely wifey, Janelle 💕</h2>
+
+        <p>
+            Another month with you,
+            another month of beautiful memories.
+        </p>
+
+        <p>
+            Thank you for making my days
+            more special and for being
+            part of my life.
+        </p>
+
+        <p>
+            I hope we continue to create
+            wonderful memories together.
+        </p>
+
+        <div class="heart">🌷</div>
+
+        <button onclick="openMessage()">
+            Open Your Surprise 💌
+        </button>
+
+        <div id="message">
+
+            <h2>💌 A Little Message For You</h2>
+
+            <p>
+                Happy Monthsary, my love! 💗
+            </p>
+
+            <p>
+                Thank you for your love,
+                care, patience, and happiness.
+                Every moment with you is
+                something I appreciate.
+            </p>
+
+            <p>
+                No matter what happens,
+                I hope we continue to support
+                each other, understand each other,
+                and grow together.
+            </p>
+
+            <p>
+                You are someone special to me,
+                and I am thankful to have you
+                in my life.
+            </p>
+
+            <h2>Always remember, I appreciate you! 💗</h2>
+
+            <p>
+                With love,
+                <br>
+ <strong>Your Favorite Person—SANDRA❤️</strong>
+            </p>
+
+        </div>
+
+        <footer>
+            Made by Sandra. 💗
+        </footer>
+
+    </div>
+
+</div>
+
+<script>
+
+function openMessage() {
+
+    const message = document.getElementById("message");
+
+    message.style.display = "block";
+
+    createHearts();
+
+}
+
+function createHearts() {
+
+    for (let i = 0; i < 15; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML = "💗";
+
+        heart.className = "floating-heart";
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.animationDelay = Math.random() * 3 + "s";
+
+        heart.style.fontSize = "25px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
